@@ -47,7 +47,8 @@
 
         .day {
             padding: 10px;
-            border: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
             cursor: pointer;
             font-weight: bold;
             font-size: 1rem;
@@ -79,8 +80,9 @@
         }
 
         .days {
-            grid-template-columns: repeat(8, .2fr);
+            grid-template-columns: repeat(8, 1fr);
         }
+
 
         footer p a:hover, header a:hover {
             margin-left: 10px;
@@ -99,6 +101,10 @@
 
             .day{
                 padding: 5px 0px;
+            }
+
+            .days {
+                grid-template-columns: repeat(8, .2fr);
             }
 
             #check:checked ~ div{
@@ -133,117 +139,119 @@
                 <a href="#music"><span class="max-sm:hidden">🎶</span>Music</a>
             </div>
         </header>
-        
-        <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[40%] bg-gray-200 text-center p-5 border z-20 hidden" id="nfd">
-            <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
-            <div id="nfdC">
-                
+        <section class="md:grid grid-cols-2">
+            <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[40%] bg-gray-200 text-center p-5 border z-20 hidden" id="nfd">
+                <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
+                <div id="nfdC">
+                    
+                </div>
             </div>
-        </div>
-        <div class="fixed content-center w-full h-full left-0 top-0 bg-gray-200 text-center p-5 border z-20 hidden" id="dwn">
-            <span class="absolute top-5 right-5 cursor-pointer text-[1rem] text-black rounded-2xl px-5 bg-gray-400" id="nClose">close</span>
-            <div id="dwnl">            </div>
-        </div>
-        <section class="pb-9 bg-gray-600 text-white max-md:h-[100vh] py-[50px]" id="Ŋjœ̌">
-            <div class="md:w-[50%] mx-auto max-sm:my-9">
-                <!-- <h2>Mmuock Leteh Language,</h2> -->
-                <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ŋjœ̌ Mmuock Leteh</h1>
-                <div class="border rounded-2xl p-5 ">
-                    <div class="bg-gray-500 p-5 rounded-2xl mb-2.5 text-center">
-                        <h1 class="mb-2.5 text-[1.2rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
-                            id="am"></h1>
-                        <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
-                            id="time"></h1>
-                        <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 text-gray-400 bg-gray-700 rounded-2xl"
-                            id="read"></h1>
+            <div class="fixed content-center w-full h-full left-0 top-0 bg-gray-200 text-center p-5 border z-20 hidden" id="dwn">
+                <div id="dwnl">            </div>
+                <br>
+                <span class="absolute justify-self-center cursor-pointer text-[1rem] text-black rounded-2xl px-5 bg-gray-400" id="nClose">close</span>
+            </div>
+            <section class="pb-9 bg-gray-600 text-white max-md:h-[100vh] py-[50px]" id="Ŋjœ̌">
+                <div class="md:w-[90%] mx-auto max-sm:my-9">
+                    <!-- <h2>Mmuock Leteh Language,</h2> -->
+                    <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ŋjœ̌ Mmuock Leteh</h1>
+                    <div class="border rounded-2xl p-5 ">
+                        <div class="bg-gray-500 p-5 rounded-2xl mb-2.5 text-center">
+                            <h1 class="mb-2.5 text-[1.2rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
+                                id="am"></h1>
+                            <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 bg-gray-700 rounded-2xl"
+                                id="time"></h1>
+                            <h1 class="mb-2.5 text-[1rem] font-bold w-fit mx-auto py-2.5 px-5 text-gray-400 bg-gray-700 rounded-2xl"
+                                id="read"></h1>
+                        </div>
+                        <p class="grid grid-cols-2  md:w-[80%] rounded-2xl p-5 border mx-auto">
+                            <span class="font-bold border-b bg-gray-900 pl-2.5">Mmuock</span> 
+                            <span
+                                class="font-bold bg-gray-900 border-b border-l pl-2.5">English</span>
+                            <span class="font-bold border-b bg-gray-700 pl-2.5">Ŋjœ̌</span> 
+                            <span
+                                class="font-bold bg-gray-700 border-b border-l pl-2.5">Time</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Neq</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Sun</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Nzẹmzěm</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Morning</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Taŋšig</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Afternoon</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Tzẹtzem</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Evening</span>
+                            <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Létụ̌</span> 
+                            <span
+                                class=" border-b py-1 border-l pl-2.5">Night</span>
+                        </p>
                     </div>
-                    <p class="grid grid-cols-2  md:w-[80%] rounded-2xl p-5 border mx-auto">
-                        <span class="font-bold border-b bg-gray-900 pl-2.5">Mmuock</span> 
-                        <span
-                            class="font-bold bg-gray-900 border-b border-l pl-2.5">English</span>
-                        <span class="font-bold border-b bg-gray-700 pl-2.5">Ŋjœ̌</span> 
-                        <span
-                            class="font-bold bg-gray-700 border-b border-l pl-2.5">Time</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Neq</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Sun</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Nzẹmzěm</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Morning</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Taŋšig</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Afternoon</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Tzẹtzem</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Evening</span>
-                        <span class="font-bold bg-gray-500 border-b py-1 pl-2.5">Létụ̌</span> 
-                        <span
-                            class=" border-b py-1 border-l pl-2.5">Night</span>
-                    </p>
+                    <h3>Download Application <a href="./app-release.apk" download="mmuockTK">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK">iPhone</a></h3>
+                </div>
+                <br><br>
+            </section>
+
+            <section class="md:h-[100%] md:flex justify-evenly gap-5 flex-wrap  pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
+                <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ákalenda Mmuock Leteh</h1>
+                <div class="grid grid-cols-2 w-[90%] mx-auto px-5 mb-5 font-semibold md:hidden">
+                    <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
+                        class="font-bold border-b bg-gray-900 pl-2.5"> Full form</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœê</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Njœêngong</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Fa'à</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Fa'à</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Tél</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Télǎng</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Ngan</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Ngangà</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeq</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqgnúá</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeql</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqlěq</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœ</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Njœêlekœr̄</span>
+                    <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeqń</span> <span
+                        class="border-b py-1 border-l pl-2.5"> Mbeqńkœó</span>
+                </div>
+                <div class="text-center border rounded-2xl">
+                    <div class="flex justify-between md:px-5 font-bold text-[1.2rem] md:ml-2.5">
+                        <h2 class="md:bg-gray-900 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month"></h2>
+                        <h2 class="bg-gray-500 px-5 py-2.5" id="yearFig"></h2>
+                        <h2 class="md:bg-gray-800 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month-year"></h2>
+                    </div>
+                    <div class="days grid md:gap-1.5 bg-green-400 md:p-1">
+
+                        <h2 class="border-l"><span class="md:hidden">Njœê</span> <span
+                                class="max-sm:hidden">Njœêngong</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span>
+                        </h2>
+                        <h2 class="border-l"><span class="md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span>
+                        </h2>
+                        <h2 class="border-l bg-red-300"><span class="md:hidden">Ngan</span> <span
+                                class="max-sm:hidden">Ngangà</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span>
+                        </h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span>
+                        </h2>
+                        <h2 class="border-l"><span class="md:hidden">Njœ</span> <span
+                                class="max-sm:hidden">Njœêlekœr̄</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeqń</span> <span
+                                class="max-sm:hidden">Mbeqńkœó</span></h2>
+                    </div>
+                    <div class="grid grid-cols-8 gap-1.5" id="calendar-grid"></div>
+
+                    <div class="flex justify-between p-2.5">
+                        <button class="bg-amber-400 py-1 px-3 font-bold text-white" id="prev-month-btn">Prev</button>
+                        <a href="./index.html" class="bg-blue-900 py-1 px-3 font-bold text-white"
+                            id="prev-month-btn">Today</a>
+                        <button class="" id="next-month-btn"></button>
+                        <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
+                    </div>
                 </div>
                 <h3>Download Application <a href="./app-release.apk" download="mmuockTK">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK">iPhone</a></h3>
-            </div>
-            <br><br>
-        </section>
-
-        <section class="md:h-[100vh] md:flex justify-evenly gap-5 flex-wrap py-[100px] pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
-            <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Ákalenda Mmuock Leteh</h1>
-            <div class="grid grid-cols-2 w-[90%] mx-auto px-5 mb-5 font-semibold md:hidden">
-                <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
-                    class="font-bold border-b bg-gray-900 pl-2.5"> Full form</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœê</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Njœêngong</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Fa'à</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Fa'à</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Tél</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Télǎng</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Ngan</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Ngangà</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeq</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Mbeqgnúá</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeql</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Mbeqlěq</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœ</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Njœêlekœr̄</span>
-                <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeqń</span> <span
-                    class="border-b py-1 border-l pl-2.5"> Mbeqńkœó</span>
-            </div>
-            <div class="text-center border rounded-2xl">
-                <div class="flex justify-between md:px-5 font-bold text-[1.2rem] md:ml-2.5">
-                    <h2 class="md:bg-gray-900 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month"></h2>
-                    <h2 class="bg-gray-500 px-5 py-2.5" id="yearFig"></h2>
-                    <h2 class="md:bg-gray-800 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month-year"></h2>
-                </div>
-                <div class="days grid md:gap-1.5 bg-green-400 md:p-1">
-
-                    <h2 class="border-l"><span class="md:hidden">Njœê</span> <span
-                            class="max-sm:hidden">Njœêngong</span></h2>
-                    <h2 class="border-l"><span class="md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span>
-                    </h2>
-                    <h2 class="border-l"><span class="md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span>
-                    </h2>
-                    <h2 class="border-l bg-red-300"><span class="md:hidden">Ngan</span> <span
-                            class="max-sm:hidden">Ngangà</span></h2>
-                    <h2 class="border-l"><span class="md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span>
-                    </h2>
-                    <h2 class="border-l"><span class="md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span>
-                    </h2>
-                    <h2 class="border-l"><span class="md:hidden">Njœ</span> <span
-                            class="max-sm:hidden">Njœêlekœr̄</span></h2>
-                    <h2 class="border-l"><span class="md:hidden">Mbeqń</span> <span
-                            class="max-sm:hidden">Mbeqńkœó</span></h2>
-                </div>
-                <div class="grid grid-cols-8 gap-1.5" id="calendar-grid"></div>
-
-                <div class="flex justify-between p-2.5">
-                    <button class="bg-amber-400 py-1 px-3 font-bold text-white" id="prev-month-btn">Prev</button>
-                    <a href="./index.html" class="bg-blue-900 py-1 px-3 font-bold text-white"
-                        id="prev-month-btn">Today</a>
-                    <button class="" id="next-month-btn"></button>
-                    <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
-                </div>
-            </div>
-            <h3>Download Application <a href="./app-release.apk" download="mmuockTK">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK">iPhone</a></h3>
+            </section>
         </section>
 
         <section class="text-center py-[100px] bg-gray-300 px-2.5" id="alpha">
