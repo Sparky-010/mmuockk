@@ -29,6 +29,14 @@
             align-items: center;
         }
 
+        header{
+            background: url(./bg.jpg) center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position-y: -300px;
+            background-blend-mode: darken;
+        }
+
         header a{
             margin-bottom: 2px;
             text-decoration: none;
@@ -123,11 +131,11 @@
     <main class="overflow-x-hidden">
         <header class="max-sm:sticky top-0 bg-green-300 py-2.5 z-30">
             <div class="flex justify-between px-2.5" style="align-items: center;">
-                <span class="text-center font-extrabold text-[1rem] text-black md:hidden">Mmuock <br>Leteh</span>
+                <span class="text-center font-extrabold text-[1rem] text-white md:hidden">Mmuock <br>Leteh</span>
                 <span class="md:hidden font-bold" id="wish"></span>
                 <label for="check" class="text-center font-extrabold text-[1rem] text-black capitalize md:hidden">menu</label>
             </div>
-            <h1 class="text-center font-extrabold text-4xl text-black mb-5 max-sm:hidden">Mmuock Leteh</h1>
+            <h1 class="text-center font-extrabold text-4xl text-white mb-5 max-sm:hidden">Mmuock Leteh</h1>
             <span class="max-sm:hidden font-bold" id="wishx"></span>
             <input type="checkbox" id="check" class="hidden">
             <div class="max-sm:hidden absolute text-center border md:border-t-0 bg-green-300 leading-9 text-blue-700 w-full mx-auto">
