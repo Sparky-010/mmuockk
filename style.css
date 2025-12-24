@@ -435,6 +435,9 @@
   .justify-self-center {
     justify-self: center;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
