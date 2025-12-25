@@ -63,14 +63,14 @@ let currentDate = new Date();
                 dayCell.innerHTML = day  + '<br>'+d[new Date().getDay()];
             }
             if (currentDate.getDate() === 25 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                wish.innerHTML = '<h2 class="text-white font-bold">🎉Merry🎅🎄Christmas🎉</h2>'
+                wish.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
                 wishx.style = 'text-align: center;'
-                wishx.innerHTML = '<h2 class="text-white font-bold">🎉Merry🎅🎄Christmas🎉</h2>'
+                wishx.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
                 console.log(currentDate.getDate());
             }else if (currentDate.getDate() === 1 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                wish.innerHTML = '<h2 class="text-white font-bold">🍾Happy🥂New🥳Year🎆</h2>'
+                wish.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy🥂New🥳Year🎆</h2>'
                 wishx.style = 'text-align: center;'
-                wishx.innerHTML = '<h2 class="text-white font-bold">🍾Happy 🥂New 🥳Year🎆</h2>'
+                wishx.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy 🥂New 🥳Year🎆</h2>'
             }
             
             calendarGridElement.appendChild(dayCell);
