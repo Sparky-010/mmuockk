@@ -119,8 +119,10 @@ let currentDate = new Date();
         }else if (ampm === 'PM' && hours12 === '12') {
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[1]}</span>`
         }
+
         // reading time
-        function Ntzẹmtzěm() {
+        // -------------------------------Ndzemèndzémé
+        function Ndzemèndzémé() {
             if (hours12 === '01' && ampm === 'AM') {
                 // console.log(`<b>Read as:</b> Beneq ${num[0]} ${njie[0]}`);
                 document.getElementById('read').innerHTML = `Read as: <i class="read"><u>${num[0]}</u> Neq ${njie[0]}</i>`
@@ -158,9 +160,9 @@ let currentDate = new Date();
             }
         }
 
-        Ntzẹmtzěm();
-
-        function Taŋšig() {
+        Ndzemèndzémé();
+//Tàngexǐk
+        function Tàngexǐk() {
             if (hours12 === '01' && ampm === 'PM') {
                 // console.log(`<b>Read as:</b> Beneq ${num[0]} ${njie[0]}`);
                 document.getElementById('read').innerHTML = `Read as: <i class="read"><u>${num[0]}</u> Neq ${njie[2]}</i>`
@@ -198,7 +200,7 @@ let currentDate = new Date();
             }
         }
 
-        Taŋšig();
+        Tàngexǐk();
 
         time.textContent = timeString;
     }
@@ -229,7 +231,7 @@ let currentDate = new Date();
         nfd.style = 'display: initial;';
         console.log(nfd.classList);
         nfd.classList.add = 'p-5 border';
-        nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">404</h2> <p class="text-[1rem] text-gray-600">Page could not be found. <br> Page is currently not available.</p>';
+        nfdC.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">About Page</h2> <br> <p class="text-[1rem] text-gray-600">This website was developed by <b>Ndembeze Kangmoh</b> to ease Time Reading as well as the Date and Day in the Mmuock Leteh Language.</p>';
         setTimeout(closs, 9000);
     }
     about.addEventListener('click', del);
@@ -256,3 +258,22 @@ let currentDate = new Date();
 
     nClose.addEventListener('click', dwnc)
 
+// download animation
+
+    const download = document.getElementById('downloading')
+    const andr = document.getElementById('andr')
+    const iph = document.getElementById('iph')
+    const ipho = document.getElementById('ipho')
+    const andro = document.getElementById('andro')
+
+    function downloading(){
+        download.style = 'display: initial;'
+        setTimeout(()=>{
+            download.style = 'display: none;'
+        },5000)
+    }
+
+    andr.addEventListener('click', downloading)
+    iph.addEventListener('click', downloading)
+    ipho.addEventListener('click', downloading)
+    andro.addEventListener('click', downloading)

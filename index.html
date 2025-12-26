@@ -6,129 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mmuock Leteh | -akalenda</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
-    <style>
-        * {
-            transition: all 300ms ease-in-out;
-        }
-
-        .ctrls {
-            align-items: center;
-        }
-
-        section {
-            align-content: center;
-        }
-
-        .music {
-            align-items: center;
-        }
-
-        a {
-            text-decoration: underline;
-            align-items: center;
-        }
-
-        header{
-            background: url(./bg.jpg) center no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-blend-mode: darken;
-        }
-
-        header a{
-            margin-bottom: 2px;
-            text-decoration: none;
-        }
-
-        header div{
-            word-spacing: 20px;
-            align-content: center;
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .day {
-            padding: 10px;
-            border-left: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
-            text-align: center;
-            /* padding: 5px 50px; */
-        }
-
-        .day:hover {
-            background: rgb(12, 13, 28);
-        }
-
-        .day.today {
-            background-color: #002fff;
-            color: #fff;
-            text-align: center;
-        }
-
-        .read {
-            color: rgb(201, 200, 200);
-        }
-
-        .period {
-            color: rgb(17, 205, 133);
-        }
-
-        l:hover {
-            background: #384142;
-            color: #fff;
-        }
-
-        .days {
-            grid-template-columns: repeat(8, 1fr);
-        }
-
-
-        footer p a:hover, header a:hover {
-            margin-left: 10px;
-            border-bottom: 1px solid;
-            color: white;
-        }
-
-        @media (max-width: 40rem) {
-            header{
-                position: fixed;
-                top: 0;
-                width: 100%;
-            }
-            header a{
-                background: #b9f8cf;
-                padding-left: 10px;
-            }
-            header div{
-                word-spacing: 10px;
-            }
-
-            .day{
-                padding: 5px 0px;
-            }
-
-            .days {
-                grid-template-columns: repeat(8, .2fr);
-            }
-
-            #check:checked ~ div{
-                display: initial;
-                display: flex;
-                flex-direction: column;
-            }
-            footer div p{
-                word-spacing: 20px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -151,6 +30,14 @@
                 <a href="#music"><span class="max-sm:hidden">🎶</span>Music</a>
             </div>
         </header>
+        <!-- loading... -->
+        <div class="fixed top-[50px] w-full justify-self-center bg-gray-200 text-center pt-2.5 px2.5
+         border z-20 hidden" id="downloading">
+            <h3 class="text-center">Downloading app...</h3>
+            <div class="w-full rounded-2xl bg-gray-400 h-5">
+                <div class="loading rounded-2xl bg-green-400 h-full"></div>
+            </div>
+        </div>
         <section class="md:grid grid-cols-2">
             <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[40%] bg-gray-200 text-center p-5 border z-20 hidden" id="nfd">
                 <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
@@ -159,7 +46,7 @@
                 </div>
             </div>
             <div class="fixed content-center w-full h-full left-0 top-0 bg-gray-200 text-center p-5 border z-20 hidden" id="dwn">
-                <div id="dwnl">            </div>
+                <div id="dwnl"> </div>
                 <br>
                 <span class="absolute justify-self-center cursor-pointer text-[1rem] text-black rounded-2xl px-5 bg-gray-400" id="nClose">close</span>
             </div>
@@ -200,7 +87,7 @@
                                 class=" border-b py-1 border-l pl-2.5">Night</span>
                         </p>
                     </div>
-                    <h3>Download Application <a href="./app-release.apk" download="mmuockTK">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK">iPhone</a></h3>
+                    <h3>Download Application <a href="./app-release.apk" download="mmuockTK" id="andr">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" id="iph">iPhone</a></h3>
                 </div>
                 <br><br>
             </section>
@@ -262,7 +149,7 @@
                         <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
                     </div>
                 </div>
-                <h3>Download Application <a href="./app-release.apk" download="mmuockTK">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK">iPhone</a></h3>
+                <h3>Download Application <a href="./app-release.apk" download="mmuockTK" id="andro">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" id="ipho">iPhone</a></h3>
             </section>
         </section>
 
