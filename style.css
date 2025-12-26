@@ -225,11 +225,20 @@
   .top-\[-50px\] {
     top: -50px;
   }
+  .top-\[10px\] {
+    top: 10px;
+  }
   .top-\[40\%\] {
     top: 40%;
   }
   .top-\[50px\] {
     top: 50px;
+  }
+  .top-\[70px\] {
+    top: 70px;
+  }
+  .top-\[100px\] {
+    top: 100px;
   }
   .right-2 {
     right: calc(var(--spacing) * 2);
@@ -483,6 +492,9 @@
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
+  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
   }
@@ -652,6 +664,11 @@
   .max-sm\:px-12 {
     @media (width < 40rem) {
       padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:top-\[50px\] {
+    @media (width >= 48rem) {
+      top: 50px;
     }
   }
   .md\:mx-\[36\%\] {
