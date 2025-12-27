@@ -5,10 +5,17 @@ let currentDate = new Date();
         const calendarGridElement = document.getElementById('calendar-grid');
         const dmonth = document.getElementById('month');
         const dmonths = ['Tạ Sang', 'Besangbèpíǽ', 'Besangbètàt', 'Besanglekuā', 'Besangbètå', 'Besăngǹtùògò', 'Besangšîâmbíǽ', 'Besangléfà', 'Besanglepụè', 'Besangléqèm', 'Besangntsôpmọ', 'Besangntsôppíǽ']
-        const d = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-
+        const dayInWeek = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
         const month = date.getMonth();
         const year = date.getFullYear();
+
+        const dayInMumuock = ['Télǎng','Télǎng', 'Télǎng', 'Télǎng', 'Télǎng', 'Télǎng', 'Télǎng']
+
+        const mday = document.getElementById('Mday')
+        mday.innerHTML = date.getDate() + '<sup>th</sup>, ' + dmonths[date.getMonth()] +', ' + date.getFullYear()
+
+        // let dayIndex =
+        // mday.textContent = dayInMumuock[new Date().getDay()]
 
         monthYearElement.textContent = `${date.toLocaleString('default', { month: 'long' })}`;
         const yearFig = document.querySelector('#yearFig').textContent = `${year}`;
@@ -60,7 +67,7 @@ let currentDate = new Date();
 
             if (day === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
                 dayCell.classList.add('today');
-                dayCell.innerHTML = day  + '<br>'+d[new Date().getDay()];
+                dayCell.innerHTML = day  + '<br>'+dayInWeek[new Date().getDay()];
             }
             if (currentDate.getDate() === 25 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
                 wish.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
@@ -107,7 +114,7 @@ let currentDate = new Date();
 
         
 
-
+        // time under main heading
         if (ampm === 'AM') {
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[0]}</span>`
         } else if (ampm === 'PM' && hours12 <= 2) {
@@ -120,6 +127,21 @@ let currentDate = new Date();
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[1]}</span>`
         }else{
             document.getElementById('am').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[5]}</span>`
+        }
+
+        // actual time
+        if (ampm === 'AM') {
+            document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[0]}</span>`
+        } else if (ampm === 'PM' && hours12 <= 2) {
+            document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[2]}</span>`
+        }else if (ampm === 'PM' && hours12 > 2 && hours12 <= 4) {
+            document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[3]}</span>`
+        }else if (ampm === 'PM' && hours12 > 4 && hours12 <= 6) {
+            document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[4]}</span>`
+        }else if (ampm === 'PM' && hours12 === '12') {
+            document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[1]}</span>`
+        }else{
+            document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[5]}</span>`
         }
 
         // reading time
@@ -254,7 +276,7 @@ let currentDate = new Date();
     setTimeout(e => {
         dwn.style = 'display: initial;';
         dwn.classList.add = 'p-5 border';
-        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & Kalenda.</h2> <br> <p class="text-[1rem] text-gray-600">Download and install the Mmuock Leteh Time and Kalenda Application on <br> <br> <a href="./app-release.apk" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">iPhone</a></span></p>';
+        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & K̇alènda.</h2> <br> <p class="text-[1rem] text-gray-600">Download and install the Mmuock Leteh Time and K̇alènda Application on <br> <br> <a href="./app-release.apk" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">iPhone</a></span></p>';
         setTimeout(dwnc, 10000);
     }, 10000)
 

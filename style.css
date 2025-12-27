@@ -310,6 +310,9 @@
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
+  .mx-0 {
+    margin-inline: calc(var(--spacing) * 0);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -394,6 +397,12 @@
   .h-full {
     height: 100%;
   }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-\[9\] {
+    width: 9;
+  }
   .w-\[20\%\] {
     width: 20%;
   }
@@ -417,6 +426,12 @@
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[99\%\] {
+    width: 99%;
+  }
+  .w-\[99\] {
+    width: 99;
   }
   .w-fit {
     width: fit-content;
