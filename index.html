@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main class="overflow-x-hidden">
+    <main class="bg-gray-300 overflow-x-hidden">
         <header class="max-sm:sticky top-0 bg-green-300 py-2.5 z-30">
             <div class="flex justify-between px-2.5" style="align-items: center;">
                 <span class="text-center font-extrabold text-[1rem] text-white md:hidden">Mmuock <br>Leteh</span>
@@ -31,28 +31,29 @@
             </div>
         </header>
         <!-- loading... -->
-        <div class="fixed top-[70px] md:top-[50px] w-full justify-self-center bg-gray-200 text-center pt-2.5 pb-1 px2.5
+        <div class="fixed top-[70px] md:top-0 w-full justify-self-center bg-gray-200 text-center pt-2.5 pb-1 px-2.5
          border z-30 hidden" id="downloading">
             <h3 class="text-center">Your App is under-way...</h3>
             <div class="w-full rounded-2xl bg-gray-400 h-5">
                 <div class="loading rounded-2xl bg-green-400 h-full"></div>
             </div>
         </div>
+        <!-- 404 -->
+        <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[40%] bg-gray-200 text-center p-5 border z-10 hidden" id="nfd">
+            <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
+            <div id="nfdC"></div>
+        </div>
+        <!-- download nft -->
+        <div class="fixed content-center w-full h-full left-0 top-0 bg-gray-200 text-center p-5 border z-40 hidden" id="dwn">
+            <div id="dwnl"> </div>
+            <br>
+            <span class="absolute top-5 right-5 justify-self-center cursor-pointer text-[1rem] text-black rounded-2xl px-5 bg-gray-400" id="nClose">close</span>
+        </div>
+
         <section class="md:grid grid-cols-2">
-            <div class="fixed md:mx-[36%] max-sm:w-full justify-self-center top-[40%] bg-gray-200 text-center p-5 border z-20 hidden" id="nfd">
-                <span class="absolute right-2.5 top-1 cursor-pointer text-[.7rem] text-black rounded-2xl px-1 bg-gray-400" id="close">close</span>
-                <div id="nfdC">
-                    
-                </div>
-            </div>
-            <div class="fixed content-center w-full h-full left-0 top-0 bg-gray-200 text-center p-5 border z-20 hidden" id="dwn">
-                <div id="dwnl"> </div>
-                <br>
-                <span class="absolute justify-self-center cursor-pointer text-[1rem] text-black rounded-2xl px-5 bg-gray-400" id="nClose">close</span>
-            </div>
-            <section class="pb-9 bg-gray-600 text-white max-md:h-[100vh] py-[50px]" id="Ŋjœ̌">
+            <!-- time -->
+            <section class="pb-9 bg-gray-600 text-white  py-[75px]" id="Ŋjœ̌"><!--max-md:h-[100vh]-->
                 <div class="md:w-[90%] mx-auto max-sm:my-9">
-                    <!-- <h2>Mmuock Leteh Language,</h2> -->
                     <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">Njœé Mmuock Leteh</h1>
                     <div class="border rounded-2xl p-5 ">
                         <div class="bg-gray-500 p-5 rounded-2xl mb-2.5 text-center">
@@ -89,7 +90,6 @@
                     </div>
                     <h3>Download Application <a href="./app-release.apk" class="text-blue-400" download="mmuockTK" id="andr">Android</a> or <a href="./ios_source.tar.gz" class="text-blue-400" download="mmuockTK" id="iph">iPhone</a></h3>
                 </div>
-                <br><br>
             </section>
 
             <section class="md:h-[100%] md:flex justify-evenly gap-5 flex-wrap  pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="kalenda">
@@ -153,7 +153,45 @@
             </section>
         </section>
 
-        <section class="text-center py-[100px] bg-gray-300 px-2.5" id="alpha">
+        <!-- sample e.gs -->
+        <section class="p-5 h-[100vh] content-center justify-items-center">
+            <h1 class="text-2xl font-bold my-5 text-center">Example Phrases of Mmuock Time & Date.</h1>
+            <table class="border border-gray-300 max-sm:w-[95%]">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-400 p-2 font-bold md:text-2xl">English</th>
+                        <th class="border border-gray-400 p-2 font-bold md:text-2xl">Mmuock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-400 p-2">What day is it today?</td>
+                        <td class="border border-gray-400 p-2">Wei ǎ šœègnè?</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">Today is...</td>
+                        <td class="border border-gray-400 p-2">Wei ǎ...</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">What time is it?</td>
+                        <td class="border border-gray-400 p-2">Njœêe Fæ̣ǽ ká?</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">It is time.</td>
+                        <td class="border border-gray-400 p-2">Njœě kùọ̀.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 p-2">It is not yet time.</td>
+                        <td class="border border-gray-400 p-2">Njœě kǎ kuọò.</td>
+                    </tr>
+                        <td class="border border-gray-400 p-2">Got a second?</td>
+                        <td class="border border-gray-400 p-2">U waí munjœě?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="text-center py-[100px] bg-gray-400 px-2.5" id="alpha">
             <h2 class="text-center text-3xl font-bold mb-2.5">Mmuock Leteh Alphabet</h2>
             <h3 class="text-gray-500 font-bold text-[1rem]">This document gives an overview of all the letters of a
                 Mmuock alphabet.</h3>
@@ -176,8 +214,8 @@
                 <l>Mm</l>
                 <l>Nn</l>
                 <l> Ññ</l>
-                <l>Gn(Ŋ,Ng)</l>
-                <l>gn(ŋ,ng)</l>
+                <l>Gn(Ng)</l>
+                <l>gn(ng)</l>
                 <l>Ææ</l>
                 <l>Ir(ir)(ɛ)</l>
                 <l>Rr</l>
@@ -193,7 +231,6 @@
                 <l>Ur(ur)</l>
 
                 <l>Ar(ar)</l>
-                <l>Ǝǝ</l>
                 <l>Ss</l>
                 <l>Tt</l>
                 <l>Ts(ts)</l>
@@ -205,7 +242,7 @@
                 <l>Yy</l>
                 <l>Zz</l>
             </div>
-            <div class="text-gray-500 text-[1rem] text-left leading-normal mt-5 md:w-[80%] mx-auto"
+            <div class="text-gray-300 text-[1rem] text-left leading-normal mt-5 md:w-[80%] mx-auto"
                 style="word-spacing: normal;">
                 <i>Source: <a href="https://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer"
                         class="text-blue-600 text-[1rem]">mmuock.org</a></i><br>
@@ -215,11 +252,10 @@
             </div>
         </section>
 
-        <section class="pb-6 text-center h-[80vh] bg-gray-400" id="board">
+        <section class="py-5 text-center bg-gray-300" id="board">
             <h3 class="text-3xl font-bold">Mmuock Leteh Language Typing board</h3>
-            <br><br>
-            <p class="font-bold text-[1.3rem]">Click <a href="https://mmuock.org/type/" target="_blank"
-                    class="text-blue-500">here</a> to the typing board</p>
+            <br>
+            <iframe src="https://mmuock.org/type/" frameborder="1" class="w-full md:w-[80%] mx-auto h-[500px] rounded-2xl">hello</iframe>
             <b>OR</b>
             <p class="font-bold text-[1.3rem]">go to <a href="https://mmuock.org/type/" target="_blank"
                     class="text-blue-500">mmuock.org</a></p>
@@ -242,33 +278,36 @@
                     <span>description of the music</span> <br>
                     <a href="./music/ADA_Ehi_Settled.mp3" class="text-blue-700 font-bold" download="m">Download</a>
                 </div>
-            </div>
-            <div class="music max-sm:flex flex-wrap justify-center mb-2 p-2.5 text-center">
-                <div>
-                    <audio width="400" height="100" controls>
-                        <source src="./music/Faith Johnmark.mp3" ,type=audio/mp3>
-                        </source>
-                    </audio>
-                </div>
-                <div>
-                    <span>description of the music</span> <br>
-                    <a href="./music/Faith Johnmark.mp3" class="text-blue-700 font-bold" download="m">Download</a>
-                </div>
-            </div>
+            </div>-->
 
-            <div class="music max-sm:flex flex-wrap justify-center mb-2 p-2.5 text-center">
-                <div>
-                    <audio width="400" height="200" controls>
-                        <source src="./music/Nathaniel.mp3" ,type=audio/mp3>
-                        </source>
-                    </audio>
-                </div>
-                <div>
-                    <span>description of the music</span> <br>
-                    <a href="music/Nathaniel.mp3" class="text-blue-700 font-bold" download="music">Download</a>
-                </div>
-            </div> -->
         </section>
+        <!-- <details class="suggest w-full content-center p-5">
+            <summary class="suggestion text-center cursor-pointer">Click <i class="text-blue-500 cursor-pointer">here</i> to make a Suggestion.</summary>
+
+            
+            <form action="" method="post" class="md:w-[40%] mx-auto content-center p-5 border">
+                <h2 class="font-bold text-center">Please fill the following to make a Suggestion.</h2>
+
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="e.g john@gmail.com" class="w-full border rounded-[10px] py-2.5 px-5">
+                <sup class="text-[.65rem]">Email required to update you when correction or recommendation have been made.</sup>
+
+                <select name="" id="opt" class="w-full border rounded-[10px] py-2.5 px-5 my-5">
+                    <option value="">Suggestion</option>
+                    <option value="">Spelling error</option>
+                    <option value="">Invalid link</option>
+                    <option value="">An Idea</option>
+                    <option value="">Other</option>
+                </select>
+                <br>
+                <label for="msg">Recommend something*</label>
+                <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Input Suggestion..." class="w-full border rounded-2xl py-2.5 px-5"></textarea>
+                <div class="flex justify-between py-2.5 px-5">
+                    <button type="clear" class="py-1 px-4 rounded-[10px] underline hover:text-red-500 cursor-pointer">Clear</button>
+                    <input type="submit" class="py-1 px-4 rounded-[10px] bg-blue-500 font-bold text-white hover:bg-blue-400 cursor-pointer" value="Recommend" onclick="alert('this feature is unavailable for now')">
+                </div>
+            </form>
+        </details> -->
     </main>
 
 
@@ -279,7 +318,7 @@
             </h4>
             <i class="block w-full text-center mb-5">Visit <a href="http://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer" class="text-blue-600 text-[1rem]">mmuock.org</a> to learn more about the Mmuock the Language.</i>
             <p>
-                <a href="#Ŋjœ̌">Ŋjœ̌</a>
+                <a href="#Ŋjœ̌">Ngjœ̌</a>
                 <a href="#kalenda">Kalenda</a>
                 <a href="#alpha">Alphabet</a>
                 <a href="#board">Typing_board</a>
@@ -298,6 +337,5 @@
     </footer>
     <script src="./script.js"></script>
 </body>
-
 
 </html>

@@ -93,7 +93,7 @@ let currentDate = new Date();
 //  time
 // Túh the night. ( lëtúh- by night, at night)
     function updateTime() {
-        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodnjœé🌤️', 'Ntsĕrnǳèm🌇', 'lëtúh🌒']
+        const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodnjœé🌤️', 'Ntsĕrnǳèm🌇', 'Tùh🌒']
         const num = ['Tạ', 'Bèpíǽ', 'Bètàt', 'Lekuā', 'Bètå', 'ǹtùògò', 'šîâmbíǽ', 'Léfà', 'Lepụè', 'Léqèm', 'Tsôpmọ', 'Tsôppíǽ']
         const now = new Date();
         const r = document.getElementById('time')
@@ -254,7 +254,7 @@ let currentDate = new Date();
     setTimeout(e => {
         dwn.style = 'display: initial;';
         dwn.classList.add = 'p-5 border';
-        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & Kalenda.</h2> <br> <p class="text-[1rem] text-gray-600">Download the Mmuock Leteh Time and Kalenda now. <br> <span>Download Application <a href="./app-release.apk" download="mmuockTK" class="text-blue-700">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="text-blue-700">iPhone</a></span></p>';
+        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & Kalenda.</h2> <br> <p class="text-[1rem] text-gray-600">Download and install the Mmuock Leteh Time and Kalenda Application on <br> <br> <a href="./app-release.apk" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">iPhone</a></span></p>';
         setTimeout(dwnc, 10000);
     }, 10000)
 

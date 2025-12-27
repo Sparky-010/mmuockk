@@ -19,6 +19,10 @@ a {
     align-items: center;
 }
 
+#dwnl a{
+    text-decoration: none;
+}
+
 header{
     background: url(./bg.jpg) center no-repeat;
     background-size: cover;
@@ -34,6 +38,22 @@ header a{
 header div{
     word-spacing: 20px;
     align-content: center;
+}
+
+td{
+    font-size: 1rem;
+    font-weight: 600;
+    padding-right: 50px;
+}
+
+label{
+    margin-left: 7px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.suggest:open > .suggestion{
+    display: none;
 }
 
 .calendar-header {
@@ -127,6 +147,10 @@ footer p{
 
     .days {
         grid-template-columns: repeat(8, .2fr);
+    }
+
+    td{
+        padding-right: 0;
     }
 
     #check:checked ~ div{
