@@ -276,7 +276,13 @@ let currentDate = new Date();
     setTimeout(e => {
         dwn.style = 'display: initial;';
         dwn.classList.add = 'p-5 border';
-        dwnl.innerHTML = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & K̇alènda.</h2> <br> <p class="text-[1rem] text-gray-600">Download and install the Mmuock Leteh Time and K̇alènda Application on <br> <br> <a href="./app-release.apk" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500 decoration-0">iPhone</a></span></p>';
+        const h2 = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & K̇alènda.</h2>'
+        const p = '<p class="text-[1rem] text-gray-600 my-2">Download and install the Mmuock Leteh Time and K̇alènda Application on;</p>'
+        const a1 = '<a href="./app-release.apk" download="mmuockTK" class="flex w-fit font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500"><img src="./android.png" alt="" width="30px" class="mr-1"> Android</a>'
+
+        const a2 = '<a href="./ios_source.tar.gz" download="mmuockTK" class="flex w-fit font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500"><img src="./APPLE.png" alt="" width="30px" class="mr-1"></img>iPhone</a>'
+        const div = `<div class="w-fit mx-auto flex gap-2">${a1} or ${a2}</div>`
+        dwnl.innerHTML = h2 + p + div;
         setTimeout(dwnc, 10000);
     }, 10000)
 
