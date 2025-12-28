@@ -12,9 +12,12 @@
 
 <body>
     <main class="bg-gray-300 overflow-x-hidden">
-        <header class="max-sm:sticky top-0 bg-green-300 p-2.5 z-30">
+        <header class="max-sm:sticky top-0 bg-green-300 px-2.5 py-1 z-30">
             <div class="flex justify-between px-2.5" style="align-items: center;">
-                <span class="text-center font-extrabold text-[1rem] text-white md:hidden">Mmuock <br>Leteh</span>
+                <div class="md:hidden">
+                <h3 class="text-center font-extrabold text-[1rem] text-white md:hidden">Mmuock</h3>
+                <h3 class="text-center font-extrabold text-[1rem] text-white md:hidden mt-[-12px]">Leteh</h3>
+                </div>
                 <span class="md:hidden font-bold bg-gray-600" id="wish"></span>
                 <label for="check" class="text-center bg-gray-600 px-2.5 rounded-2xl font-extrabold text-[1rem] text-white capitalize md:hidden">menu</label>
             </div>
@@ -23,6 +26,7 @@
             <h4 class="max-sm:hidden mb-2.5 text-[1.2rem] font-bold w-fit mx-auto px-5 rounded-[7px] bg-gray-700  text-white" id="Mday"></h4>
             <span class="max-sm:hidden font-bold" id="wishx"></span>
             <input type="checkbox" id="check" class="hidden">
+            
             <div class="max-sm:hidden absolute left-0 text-center border md:border-t-0 bg-green-300 leading-9 text-blue-700 w-full mx-auto">
                 <a href="#Ŋjœ̌"><span class="max-sm:hidden">🕒</span>Njœé</a>
                 <a href="#K̇alènda"><span class="max-sm:hidden">🗓️</span>K̇alènda</a>
@@ -91,14 +95,14 @@
                                 class=" border-b py-1 border-l pl-2.5">Night</span>
                         </p>
                     </div>
-                    <h3>Download Application <a href="./app-release.apk" class="text-blue-400" download="mmuockTK" id="andr">Android</a> or <a href="./ios_source.tar.gz" class="text-blue-400" download="mmuockTK" id="iph">iPhone</a></h3>
+                    <h3 class="text-[.9rem] mt-5">Download Application <a href="./app-release.apk" class="text-white py-1 px-2 rounded-[7px] hover:bg-blue-600 bg-blue-400" download="mmuockTK" id="andr">Android</a> or <a href="./ios_source.tar.gz" class="text-white py-1 px-2 rounded-[7px] hover:bg-blue-600 bg-blue-400" download="mmuockTK" id="iph">iPhone</a></h3>
                 </div>
             </section>
 
-            <section class="md:h-[100%] md:flex justify-evenly gap-5 flex-wrap  pb-9 bg-gray-700 text-white max-sm:overflow-x-scroll" id="K̇alènda">
+            <section class="md:h-[100%] justify-evenly gap-5 flex-wrap bg-gray-700 text-white max-sm:overflow-x-scroll" id="K̇alènda">
                 <h1 class="font-bold text-2xl underline ml-2.5 mb-3 w-full text-center">K̇alènda Mmuock Leteh</h1>
-                <div class="grid grid-cols-2 w-[90%] mx-auto px-5 mb-5 font-semibold md:hidden">
-                    <span class="bfont-bold border-b bg-gray-900 pl-2.5">Short</span> <span
+                <div class="grid grid-cols-2 w-fit mx-auto px-5 mb-5 font-semibold md:hidden">
+                    <span class="font-bold border-b bg-gray-900 pl-2.5">Short</span> <span
                         class="font-bold border-b bg-gray-900 pl-2.5"> Full form</span>
                     <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Njœê</span> <span
                         class="border-b py-1 border-l pl-2.5"> Njœêngong</span>
@@ -117,48 +121,39 @@
                     <span class="border-b font-bold bg-gray-500 py-1 pl-2.5">Mbeqń</span> <span
                         class="border-b py-1 border-l pl-2.5"> Mbeqńkœó</span>
                 </div>
-                <div class="text-center border rounded-2xl">
+                <div class="text-center border rounded-[10px] w-fit mx-auto">
                     <div class="flex justify-between md:px-5 font-bold text-[1.2rem] md:ml-2.5">
                         <h2 class="md:bg-gray-900 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month"></h2>
                         <h2 class="bg-gray-500 px-5 py-2.5" id="yearFig"></h2>
                         <h2 class="md:bg-gray-800 md:rounded-2xl px-2.5 md:px-5 py-2.5" id="month-year"></h2>
                     </div>
-                    <div class="days grid md:gap-1.5 bg-green-400 md:p-1">
-
-                        <h2 class="border-l"><span class="md:hidden">Njœê</span> <span
-                                class="max-sm:hidden">Njœêngong</span></h2>
-                        <h2 class="border-l"><span class="md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span>
-                        </h2>
-                        <h2 class="border-l"><span class="md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span>
-                        </h2>
-                        <h2 class="border-l bg-red-300"><span class="md:hidden">Ngan</span> <span
-                                class="max-sm:hidden">Ngangà</span></h2>
-                        <h2 class="border-l"><span class="md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span>
-                        </h2>
-                        <h2 class="border-l"><span class="md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span>
-                        </h2>
-                        <h2 class="border-l"><span class="md:hidden">Njœ</span> <span
-                                class="max-sm:hidden">Njœêlekœr̄</span></h2>
-                        <h2 class="border-l"><span class="md:hidden">Mbeqń</span> <span
-                                class="max-sm:hidden">Mbeqńkœó</span></h2>
+                    <div class="grid-cols-8 grid md:gap-1.5 bg-green-400 md:p-1" id="mmuockDays">
+                        <h2 class="border-l"><span class="md:hidden">Njœ</span> <span class="max-sm:hidden">Njœêlekœr̄</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Fa'à</span> <span class="max-sm:hidden">Fa'à</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Tél</span> <span class="max-sm:hidden">Télǎng</span></h2>
+                        <h2 class="border-l bg-red-300"><span class="md:hidden">Ngan</span> <span class="max-sm:hidden">Ngangà</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeq</span> <span class="max-sm:hidden">Mbeqgnúá</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeql</span> <span class="max-sm:hidden">Mbeqlěq</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Njœê</span> <span class="max-sm:hidden">Njœêngong</span></h2>
+                        <h2 class="border-l"><span class="md:hidden">Mbeqń</span> <span class="max-sm:hidden">Mbeqńkœó</span></h2>
                     </div>
                     <div class="grid grid-cols-8 gap-1.5" id="calendar-grid"></div>
-
-                    <div class="flex justify-between p-2.5">
-                        <button class="bg-amber-400 py-1 px-3 font-bold text-white" id="prev-month-btn">Prev</button>
-                        <a href="./index.html" class="bg-blue-900 py-1 px-3 font-bold text-white"
-                            id="prev-month-btn">Today</a>
-                        <button class="" id="next-month-btn"></button>
-                        <!-- <button class="bg-green-400 py-1 px-3 font-bold text-white" id="next-month-btn">Next</button> -->
-                    </div>
                 </div>
-                <h3>Download Application <a href="./app-release.apk" download="mmuockTK" class="text-blue-400" id="andro">Android</a> or <a href="./ios_source.tar.gz" download="mmuockTK" class="text-blue-400" id="ipho">iPhone</a></h3>
+                
+                <br>
+                <h3 class="text-[.9rem] ml-5">Download Application 
+                    <a href="./app-release.apk" download="muockTK" class="text-white py-1 px-2 rounded-[7px] hover:bg-blue-600 bg-blue-400" id="andro">Android</a>
+                     or 
+                    <a href="./ios_source.tar.gz" download="mmuockTK" class="text-white py-1 px-2 rounded-[7px] hover:bg-blue-600 bg-blue-400" id="ipho">iPhone</a>
+                </h3>
+                <br>
+                <h3 class="text -[.9rem] ml-5">See <a href="./calendar_output.html" class="py-1 px-2 rounded-[7px] hover:bg-blue-600  hover:text-white text-blue-400">Full K̇alènda</a></h3>
             </section>
         </section>
 
         <!-- sample e.gs -->
         <section class="p-5 h-[100vh] content-center justify-items-center">
-            <h1 class="text-2xl font-bold my-5 text-center">Example Phrases of Mmuock Time & Date.</h1>
+            <h1 class="text-2xl font-bold my-5 text-center">Phrases of Mmuock Time & Date.</h1>
             <table class="border border-gray-300 max-sm:w-[95%]">
                 <thead>
                     <tr>
@@ -245,7 +240,7 @@
                 <l>Yy</l>
                 <l>Zz</l>
             </div>
-            <div class="text-gray-300 text-[1rem] text-left leading-normal mt-5 md:w-[80%] mx-auto"
+            <div class="text-gray-900 text-[1rem] text-left leading-normal mt-5 md:w-[80%] mx-auto"
                 style="word-spacing: normal;">
                 <i>Source: <a href="https://mmuock.org/alphabet/" target="_blank" rel="noopener noreferrer"
                         class="text-blue-600 text-[1rem]">mmuock.org</a></i><br>
@@ -256,14 +251,14 @@
         </section>
 
         <section class="py-5 bg-gray-300" id="board">
-            <h3 class="text-3xl font-bold">Mmuock Leteh Language Typing board</h3>
+            <h3 class="text-3xl font-bold text-center">Mmuock Leteh Language Typing board</h3>
             <br>
             <iframe src="https://mmuock.org/type/" frameborder="1" class="text-center justify-items-center p-2.5 border w-[95%] md:w-[80%] mx-auto h-[500px] rounded-2xl"></iframe>
-            <source><a href="https://mmuock.org/type" target="_blank" class="ml-5 text-blue-500">mmuock.org</a>
+            <source class="ml-[120px]">source: <a href="https://mmuock.org/type" target="_blank" class="text-blue-500">mmuock.org</a>
             <p class="font-bold  text-center text-[1.3rem]">
                 <b>OR</b> <br>
                 Go to <a href="https://mmuock.org/type/" target="_blank"
-                class="text-blue-500">mmuock.org</a>
+                class="text-blue-500 ">mmuock.org</a>
             </p>
         </section>
 
@@ -328,8 +323,8 @@
                 <a href="#K̇alènda">K̇alènda</a>
                 <a href="#alpha">Alphabet</a>
                 <a href="#board">Typing_board</a>
-                <a href="#" id="fabout">About</a>
-                <a href="#" id="dev">Developer</a>
+                <a href="#about" id="fabout">About</a>
+                <a href="#dev" id="dev">Developer</a>
                 <a href="#music">Music</a>
                 <a href="#Contact">Contact</a>
             </p>

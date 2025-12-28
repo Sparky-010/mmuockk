@@ -1,23 +1,23 @@
 let currentDate = new Date();
+const dayInWeek = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const dayInMumuock = ['Njœêngong',"Fa'à",'Télǎng', 'Ngangà', 'Mbeqgnúá', 'Mbeqlěq', 'Njœêlekœr̄', 'Mbeqńkœó']
 
 function renderCalendar(date) {
     const monthYearElement = document.getElementById('month-year');
     const calendarGridElement = document.getElementById('calendar-grid');
     const dmonth = document.getElementById('month');
     const dmonths = ['Tạ Sang', 'Besangbèpíǽ', 'Besangbètàt', 'Besanglekuā', 'Besangbètå', 'Besăngǹtùògò', 'Besangšîâmbíǽ', 'Besangléfà', 'Besanglepụè', 'Besangléqèm', 'Besangntsôpmọ', 'Besangntsôppíǽ']
-    const dayInWeek = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     const month = date.getMonth();
     const year = date.getFullYear();
 
-    const dayInMumuock = ['Télǎng','Télǎng', 'Télǎng', 'Télǎng', 'Télǎng', 'Télǎng', 'Télǎng']
 
     // date, month and year
     const mday = document.getElementById('Mday')
     const mDay = document.getElementById('mDay')
-
     function dateMonthYear() {
         mday.innerHTML = date.getDate() + '<sup>th</sup>, ' + dmonths[date.getMonth()] +', ' + date.getFullYear()
         mDay.innerHTML = `<i>${date.getDate()}  <sup>th</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
+        // mDay.innerHTML = `${dayInMumuock[new Date().getDay()]}, <i>${date.getDate()}  <sup>th</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
     }
     dateMonthYear()
 
@@ -91,15 +91,6 @@ function renderCalendar(date) {
     }
 }
 
-document.getElementById('prev-month-btn').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() - 1);
-    renderCalendar(currentDate);
-});
-
-// document.getElementById('next-month-btn').addEventListener('click', () => {
-//     currentDate.setMonth(currentDate.getMonth() + 1);
-//     renderCalendar(currentDate);
-// });
 
 // Initial render
 renderCalendar(currentDate);
@@ -110,15 +101,15 @@ function updateTime() {
     const njie = ['Ndzemèndzémé🌅', 'Tàngexǐk ndéndè☀️', 'Tàngexǐk🌤️', 'Mbodnjœé🌤️', 'Ntsĕrnǳèm🌇', 'Tùh🌒']
     const num = ['Tạ', 'Bèpíǽ', 'Bètàt', 'Lekuā', 'Bètå', 'ǹtùògò', 'šîâmbíǽ', 'Léfà', 'Lepụè', 'Léqèm', 'Tsôpmọ', 'Tsôppíǽ']
     const now = new Date();
-    const r = document.getElementById('time')
+    // const r = document.getElementById('time')
     const hours = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
     const ampm = hours >= 12 ? 'PM' : 'AM';
     const hours12 = (hours % 12 || 12).toString().padStart(2, '0');
     
-    const timeString = `${hours12}:${minutes} ${ampm}`;
-
+    const timeString = `${hours12}:${minutes} ${ampm}, ${dayInWeek[new Date().getDay()]}`;
+    
     
 
     // time under main heading
@@ -290,7 +281,7 @@ setTimeout(e => {
     const a2 = '<a href="./ios_source.tar.gz" download="mmuockTK" class="flex w-fit font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500"><img src="./APPLE.png" alt="" width="30px" class="mr-1"></img>iPhone</a>'
     const div = `<div class="w-fit mx-auto flex gap-2">${a1} or ${a2}</div>`
     dwnl.innerHTML = h2 + p + div;
-    setTimeout(dwnc, 10000);
+    setTimeout(dwnc, 7000);
 }, 10000)
 
 nClose.addEventListener('click', dwnc)
