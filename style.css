@@ -290,11 +290,20 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
-  .my-2\.5 {
-    margin-block: calc(var(--spacing) * 2.5);
-  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
+  }
+  .my-\[10vh\] {
+    margin-block: 10vh;
+  }
+  .my-\[15vh\] {
+    margin-block: 15vh;
+  }
+  .my-\[20vh\] {
+    margin-block: 20vh;
+  }
+  .my-\[40vh\] {
+    margin-block: 40vh;
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
@@ -310,9 +319,6 @@
   }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
-  }
-  .mb-1\.5 {
-    margin-bottom: calc(var(--spacing) * 1.5);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -337,6 +343,9 @@
   }
   .ml-2\.5 {
     margin-left: calc(var(--spacing) * 2.5);
+  }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
   }
   .block {
     display: block;
@@ -379,6 +388,12 @@
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[95\%\] {
+    width: 95%;
+  }
+  .w-\[95\] {
+    width: 95;
   }
   .w-\[99\%\] {
     width: 99%;
@@ -454,9 +469,6 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
-  }
-  .rounded-\[2xl\] {
-    border-radius: 2xl;
   }
   .rounded-\[7px\] {
     border-radius: 7px;
