@@ -16,7 +16,22 @@ function renderCalendar(date) {
     const mDay = document.getElementById('mDay')
     function dateMonthYear() {
         mday.innerHTML = date.getDate() + '<sup>th</sup>, ' + dmonths[date.getMonth()] +', ' + date.getFullYear()
-        mDay.innerHTML = `<i>${date.getDate()}  <sup>th</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
+        // datePosition
+        const datePst = ['st', 'nd', 'rd', 'th']
+        let pst;
+        function datePosition(params) {
+            if (params === 1 || params === 21 || params === 31) {
+                pst = datePst[0]
+            } else if (params === 2 || params === 22) {
+                pst = datePst[1]
+            } else if (params === 3 || params === 23) {
+                pst = datePst[2]
+            } else {
+                pst = datePst[3]
+            }
+        }
+        datePosition(new Date().getDate())
+        mDay.innerHTML = `<i>${date.getDate()}<sup>${pst}</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
         // mDay.innerHTML = `${dayInMumuock[new Date().getDay()]}, <i>${date.getDate()}  <sup>th</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
     }
     dateMonthYear()
@@ -55,8 +70,16 @@ function renderCalendar(date) {
     const firstDay = new Date(year, month, 1);
     const firstDayOfWeek = firstDay.getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const wish = document.getElementById('wish')
-    const wishx = document.getElementById('wishx')
+    
+// wishing christmas and new year
+    if (currentDate.getDate() === 25 & currentDate.getMonth() === 11) {
+        wishx.style = 'display: initial; text-align: center;';
+        wishx.innerHTML = '<h2 class="text-red-500 font-bold px-4" style="background: white;">🎉Merry🎅🎄Christmas🎉</h2>'
+        console.log(currentDate.getDate());
+    }else if (currentDate.getDate() === 1  & currentDate.getMonth() === 0) {
+        wishx.style = 'text-align: center;'
+        wishx.innerHTML = '<h2 class="text-blue-500 font-bold px-4" style="background: white;">🍾Happy 🥂New 🥳Year🎆</h2>'
+    }
 
     calendarGridElement.innerHTML = '';
 
@@ -76,23 +99,11 @@ function renderCalendar(date) {
             dayCell.classList.add('today');
             dayCell.innerHTML = day  + '<br>'+dayInWeek[new Date().getDay()];
         }
-        if (currentDate.getDate() === 25 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-            wish.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
-            wishx.style = 'text-align: center;'
-            wishx.innerHTML = '<h2 class="text-red-500 font-bold px-4 bg-gray-600">🎉Merry🎅🎄Christmas🎉</h2>'
-            console.log(currentDate.getDate());
-        }else if (currentDate.getDate() === 1 && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-            wish.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy🥂New🥳Year🎆</h2>'
-            wishx.style = 'text-align: center;'
-            wishx.innerHTML = '<h2 class="text-blue-500 font-bold px-4 bg-gray-600">🍾Happy 🥂New 🥳Year🎆</h2>'
-        }
+        
         
         calendarGridElement.appendChild(dayCell);
     }
 }
-
-
-// Initial render
 renderCalendar(currentDate);
 
 //  time
@@ -142,8 +153,8 @@ function updateTime() {
         document.getElementById('amp').innerHTML = `${hours12}:${minutes}:${seconds} <span class="period">${njie[5]}</span>`
     }
 
-    // reading time
-    // -------------------------------Ndzemèndzémé
+// reading time
+// -------------------------------Ndzemèndzémé
     function Ndzemèndzémé() {
         if (hours12 === '01' && ampm === 'AM') {
             // console.log(`<b>Read as:</b> Benēq ${num[0]} ${njie[0]}`);
@@ -181,8 +192,8 @@ function updateTime() {
             document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[11]}</u> ${njie[1]}</i>`
         }
     }
-
     Ndzemèndzémé();
+
 //Tàngexǐk
     function Tàngexǐk() {
         if (hours12 === '01' && ampm === 'PM') {
@@ -221,7 +232,6 @@ function updateTime() {
             document.getElementById('read').innerHTML = `Read as: <i class="read">Benēq <u>${num[11]}</u> ${njie[0]}</i>`
         }
     }
-
     Tàngexǐk();
 
     time.textContent = timeString;
@@ -287,7 +297,6 @@ setTimeout(e => {
 nClose.addEventListener('click', dwnc)
 
 // download animation
-
 const download = document.getElementById('downloading')
 const andr = document.getElementById('andr')
 const iph = document.getElementById('iph')
