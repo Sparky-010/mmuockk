@@ -15,7 +15,6 @@ function renderCalendar(date) {
     const mday = document.getElementById('Mday')
     const mDay = document.getElementById('mDay')
     function dateMonthYear() {
-        mday.innerHTML = date.getDate() + '<sup>th</sup>, ' + dmonths[date.getMonth()] +', ' + date.getFullYear()
         // datePosition
         const datePst = ['st', 'nd', 'rd', 'th']
         let pst;
@@ -31,6 +30,7 @@ function renderCalendar(date) {
             }
         }
         datePosition(new Date().getDate())
+        mday.innerHTML = `<i>${date.getDate()}<sup>${pst}</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
         mDay.innerHTML = `<i>${date.getDate()}<sup>${pst}</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
         // mDay.innerHTML = `${dayInMumuock[new Date().getDay()]}, <i>${date.getDate()}  <sup>th</sup>,   ${dmonths[date.getMonth()]},   ${date.getFullYear()}</i>`
     }
@@ -41,6 +41,8 @@ function renderCalendar(date) {
 
     monthYearElement.textContent = `${date.toLocaleString('default', { month: 'long' })}`;
     const yearFig = document.querySelector('#yearFig').textContent = `${year}`;
+
+
     if (monthYearElement.innerText === 'January') {
         dmonth.textContent = dmonths[0];
     }else if (monthYearElement.innerText === 'February') {
@@ -104,8 +106,10 @@ function renderCalendar(date) {
         calendarGridElement.appendChild(dayCell);
     }
 }
+document.querySelector('.n').addEventListener('click',p=>{
+    
+})
 renderCalendar(currentDate);
-
 //  time
 // Túh the night. ( lëtúh- by night, at night)
 function updateTime() {

@@ -126,6 +126,10 @@ footer p a:hover, header a:hover {
     color: white;
 }
 
+footer div > a:hover{
+    color: #fff;
+}
+
 footer p{
     word-spacing: 15px;
 }
