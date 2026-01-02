@@ -289,7 +289,7 @@ setTimeout(e => {
     dwn.style = 'display: initial;';
     dwn.classList.add = 'p-5 border';
     const h2 = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & K̇alènda.</h2>'
-    const p = '<p class="text-[1rem] text-gray-600 my-2">Download and install the Mmuock Leteh Time and K̇alènda Application on;</p>'
+    const p = '<p class="text-[1rem] text-gray-600 my-2"> Click <a href="https://computertips.page.gd/mmuock_/" target="_blank">HERE</a> and go to the New and updated website.</p>'
     const a1 = '<a href="./app-release.apk" download="mmuockTK" class="flex w-fit font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500"><img src="./android.png" alt="" width="30px" class="mr-1"> Android</a>'
 
     const a2 = '<a href="./ios_source.tar.gz" download="mmuockTK" class="flex w-fit font-bold text-white py-1 px-4 rounded-[10px] bg-blue-500"><img src="./APPLE.png" alt="" width="30px" class="mr-1"></img>iPhone</a>'
@@ -317,4 +317,5 @@ function downloading(){
 andr.addEventListener('click', downloading)
 iph.addEventListener('click', downloading)
 ipho.addEventListener('click', downloading)
+
 andro.addEventListener('click', downloading)
