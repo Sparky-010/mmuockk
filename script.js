@@ -289,7 +289,7 @@ setTimeout(e => {
     dwn.style = 'display: initial;';
     dwn.classList.add = 'p-5 border';
     const h2 = '<h2 class="font-bold text-gray-600 text-3xl underline">Leteh Time & K̇alènda.</h2>'
-    const p = '<p class="text-[1rem] text-gray-600 my-2"> Click <a href="https://computertips.page.gd/mmuock_/" target="_blank">HERE</a> and go to the New and updated website.</p>'
+    const p = '<p class="text-[1rem] text-gray-600 my-2"> Click <a href="https://computertips.page.gd/mmuock_/" target="_blank" style="color: blue; text-decoration: underline;">HERE</a> and go to the New and updated website.</p>'
     dwnl.innerHTML = h2 + p;
     setTimeout(dwnc, 7000);
 }, 10000)
@@ -315,4 +315,5 @@ iph.addEventListener('click', downloading)
 ipho.addEventListener('click', downloading)
 
 andro.addEventListener('click', downloading)
+
 
